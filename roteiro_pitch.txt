@@ -1,0 +1,27 @@
+ROTEIRO DO VÍDEO PITCH — POKÉMON EXPLORER
+Duração sugerida: 3 a 4 minutos
+
+1. APRESENTAÇÃO (0:00–0:30)
+"Olá! Este é o Pokémon Explorer, um site desenvolvido como projeto de Front-End. O objetivo é apresentar Pokémon e algumas de suas características utilizando dados da PokéAPI."
+
+2. DEMONSTRAÇÃO DO SITE (0:30–1:30)
+"Na página inicial temos uma apresentação do projeto. Na seção Pokédex, os Pokémon são carregados em cards com imagem, número, nome, tipos e experiência base. Também temos busca por nome ou número, filtro por tipo e botão para carregar mais resultados."
+
+Demonstre uma busca por "pikachu", depois limpe a busca e teste o filtro por tipo. Clique em Carregar mais.
+
+3. DEMONSTRAÇÃO TÉCNICA (1:30–2:30)
+"No arquivo script.js, a função loadPokemon utiliza fetch para consultar a lista de Pokémon. Depois, outra sequência de requisições busca os detalhes de cada um. A resposta é convertida para JSON e os elementos dos cards são criados com document.createElement e inseridos na página com appendChild."
+
+Abra o DevTools (F12), aba Network, filtre por Fetch/XHR e recarregue a página. Mostre as chamadas para pokeapi.co. No código, mostre fetch, createElement e appendChild.
+
+4. HTML E CSS (2:30–3:15)
+"O HTML contém a estrutura da página e os espaços onde os cards serão inseridos. O CSS define as cores, os cards e a adaptação para diferentes tamanhos de tela. Os cards são gerados dinamicamente pelo JavaScript com os dados da API."
+
+5. ENCERRAMENTO (3:15–3:45)
+"Com este projeto, pratiquei consumo de API, requisições assíncronas, manipulação do DOM e criação de uma interface responsiva usando HTML, CSS e JavaScript. Obrigado!"
+
+LEMBRETES
+- Não é necessário criar conta nem configurar chave de API.
+- Teste o site antes de gravar.
+- Mostre a aba Network e o código JavaScript no vídeo.
+- Publique o vídeo no YouTube como não listado ou em outra plataforma acessível.

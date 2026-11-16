@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Pokémon usando dados da PokéAPI.">
+  <title>Pokémon Explorer | Pokédex</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#"><span class="pokeball">◉</span> POKÉMON <small>EXPLORER</small></a>
+    <nav><a href="#pokedex">Pokédex</a><a href="#sobre">Sobre</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">SUA JORNADA COMEÇA AQUI</p>
+        <h1>DESCUBRA<br><span>SEU PRÓXIMO</span><br>POKÉMON!</h1>
+        <p>Explore criaturas, descubra seus tipos e conheça informações diretamente da PokéAPI.</p>
+        <a class="primary-button" href="#pokedex">ABRIR POKÉDEX <span>↓</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="big-ball"><div class="ball-top"></div><div class="ball-line"></div><div class="ball-center"></div></div>
+        <span class="spark spark-one">✦</span><span class="spark spark-two">✧</span>
+      </div>
+    </section>
+
+    <section class="pokedex-section" id="pokedex">
+      <div class="section-title">
+        <div><p class="eyebrow">CATÁLOGO DE CRIATURAS</p><h2>POKÉDEX</h2></div>
+        <p>Informações carregadas ao vivo pela PokéAPI.</p>
+      </div>
+
+      <form id="search-form" class="search-bar">
+        <label class="sr-only" for="search-input">Buscar Pokémon por nome ou número</label>
+        <input id="search-input" type="search" placeholder="Buscar por nome ou número (ex.: pikachu, 25)" autocomplete="off">
+        <button type="submit">BUSCAR</button>
+      </form>
+
+      <div class="filters" aria-label="Filtro por tipo">
+        <label for="type-filter">Filtrar por tipo:</label>
+        <select id="type-filter">
+          <option value="">Todos os tipos</option>
+          <option value="normal">Normal</option><option value="fire">Fogo</option>
+          <option value="water">Água</option><option value="electric">Elétrico</option>
+          <option value="grass">Planta</option><option value="ice">Gelo</option>
+          <option value="fighting">Lutador</option><option value="poison">Veneno</option>
+          <option value="ground">Terra</option><option value="flying">Voador</option>
+          <option value="psychic">Psíquico</option><option value="bug">Inseto</option>
+          <option value="rock">Pedra</option><option value="ghost">Fantasma</option>
+          <option value="dragon">Dragão</option><option value="dark">Sombrio</option>
+          <option value="steel">Aço</option><option value="fairy">Fada</option>
+        </select>
+      </div>
+
+      <p id="status-message" class="status-message" role="status">Carregando Pokémon...</p>
+      <div id="pokemon-grid" class="pokemon-grid" aria-live="polite"></div>
+      <button id="load-more" class="load-more" type="button">CARREGAR MAIS</button>
+    </section>
+
+    <section class="about-section" id="sobre">
+      <p class="eyebrow">SOBRE O PROJETO</p>
+      <h2>UM MUNDO DE POSSIBILIDADES.</h2>
+      <p>Este projeto acadêmico utiliza HTML, CSS e JavaScript para consumir a PokéAPI. Os cards são criados dinamicamente no navegador com informações recebidas em formato JSON.</p>
+    </section>
+  </main>
+
+  <footer><span class="footer-logo">POKÉMON EXPLORER</span><span>Projeto acadêmico • HTML, CSS e JavaScript</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
